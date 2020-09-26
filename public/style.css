@@ -1,0 +1,31 @@
+body{
+  padding-top: 20px;
+  word-wrap:break-word;
+  font-family: 'Roboto', sans-serif;
+  background-image: url("img/roulette.jpg");/
+  height: 800px; /* You must set a specified height */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  /* color: white; */
+}
+img{
+  height: 200px;
+}
+
+ul{
+  list-style-type: none;
+}
+
+h1, h3{
+  font-family: 'Asul', sans-serif;
+  color: #6f6f6f;
+}
+.jumbo{
+  background-color: gainsboro;
+  border-radius: 10px;
+  width: 60%;
+  margin-left: 20%;
+  padding: 20px;
+
+}

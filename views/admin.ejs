@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+    <title>Roulette</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+     <link href="https://fonts.googleapis.com/css2?family=Asul&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="containerP">
+  <section class="jumbo">
+
+
+    <div class="page-header text-center">
+        <h1><span class="fa fa-money"></span> Roulette</h1>
+        <h4>Admin Page</h4>
+        <a href="/logout" class="btn btn-Pdefault btn-sm">Logout</a>
+    </div>
+
+    <div class="row">
+
+        <% if (user.local.email) { %>
+                <h3>Welcome back, <span id="userEmail"><%= user.local.email %></span></h3>
+              <% } %>
+
+            <div class= "text-center">
+              <h3>This is the admin account</h3>
+              <% let adminLosses = 0,
+                     adminWins   = 0,
+                     adminTotal  = 0; %>
+              <% for(let i=0; i < roulette.length; i++) { %>
+                  <% adminLosses += parseInt(roulette[i].wins); %>
+                  <% adminWins   += parseInt(roulette[i].losses); %>
+                  <% adminTotal  += parseInt(roulette[i].total); %>
+              <% } %>
+              <p>House Total Losses:  <%= adminLosses %></p>
+              <p>House Total Wins:    <%= adminWins %></p>
+              <p>House Account Total: $<%= adminTotal %></p>
+            </div>
+    </div>
+
+  </section>
+</div>
+
+<script src="main.js"></script>
+
+</body>
+</html>
